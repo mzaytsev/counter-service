@@ -4,7 +4,7 @@ node {
 		checkout scm    
 	}
 	stage('Build image') {         
-		app = docker.build("docker/cp-homework")    
+		app = docker.build("docker\cp-homework")    
 	}        
 	stage('Push image') {
 		docker.withRegistry('https://registry.hub.docker.com', 'git') {            
